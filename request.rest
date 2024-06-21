@@ -1,3 +1,5 @@
+#Room API's
+
 ###
 GET http://localhost:5000/api/rooms/getRooms
 
@@ -30,6 +32,9 @@ Content-Type: application/json
 }
 ###
 DELETE http://localhost:5000/api/rooms/deleteRoom/66735534c928071d23ba82d4
+
+#Booking API's
+
 
 ###
 #Get Bookings
@@ -68,3 +73,58 @@ Content-Type: application/json
 ###
 #Update Bookings
 DELETE  http://localhost:5000/api/bookings/deleteBooking/66736e657781c81dc94ea6fd
+
+
+# User API's
+
+###
+#Get Users
+GET http://localhost:5000/api/users/getUsers
+
+
+###
+#Get Single User
+GET http://localhost:5000/api/users/getUser/66749d7d9c26129ce64ab1d7
+
+
+###
+#Create User
+POST http://localhost:5000/api/users/createUser
+Content-Type: application/json
+
+{
+    "name":"Kajeevan Kaneshamoorthy",
+    "email":"hellomynameiskajeevan@gmail.com",
+    "password":"kajeevan"
+}
+
+###
+#Login User
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email":"hellomynameiskajeevan@gmail.com",
+    "password":"kajeevan"
+}
+###
+#Logout user
+GET http://localhost:5000/api/users/logout
+
+###
+#Update User
+PUT http://localhost:5000/api/users/updateUser/66749dc6354cccb56dd7df16
+Content-Type: application/json
+
+{
+    "name":"Jeff Beos",
+    "email":"jeffb@gmail.com",
+    "password":"jefbesos"
+}
+###
+#Delete User
+DELETE http://localhost:5000/api/users/deleteUser/6674b0ec1da60fc85341e815
+
+###
+#Check Auth
+GET http://localhost:5000/auth

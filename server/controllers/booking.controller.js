@@ -57,7 +57,9 @@ const updateBooking = async (req, res, next) => {
       return next(errorHandler(404, "Booking not found"));
     }
     return res.json("Booking Updated Successfully");
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 };
 
 //Delete room
